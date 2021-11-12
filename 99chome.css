@@ -1,0 +1,161 @@
+html {
+  font-family: 'Josefin Sans', sans-serif;
+  height: 100%;
+  background-color: grey;
+  line-height: 2;
+  font-size: large;
+  background-color: rgb(224,224,224);
+}
+
+body {
+  background-color: white;
+  border-left: 3px solid rgb(51, 51, 51);
+  border-right: 3px solid rgb(51, 51, 51);
+  min-height: 100%;
+  margin: 0px auto;
+  min-width: 320px;
+  padding: 10px;
+  font-size: larger;
+  background-color: rgb(224,224,224);
+  
+}
+
+#wrapper {
+  margin: 0 auto;
+  background-color: #fff;
+}
+.center-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex {
+  display: flex;
+}
+
+header {
+    background-color: #d85959;
+    height: 20vh;
+    padding: 3px;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 20px;
+  font-size: 3em;
+  left: 100px;
+  position: absolute;
+} 
+
+ h5 {
+  text-align: right;
+  color: white;
+  right: -700px;
+  top: 50px;
+  position: relative;
+  font size: 20px;
+}
+
+.home_page {
+  padding: 5px 0 5px 0;
+  text-align: center;
+  line-height: 32px;
+  background-color: #818181;
+}
+
+ul.home_page {
+  margin-top: 15px;
+}
+
+.home_page li {
+  display: inline;
+  padding: 0 10px 0 10px;
+  font-size: 20px;
+}
+
+.home_page a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px;
+  font-variant: small-caps;
+}
+
+.home_page a:hover {
+  color: yellow;
+}
+.box {
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-post {
+  margin-top: 20px;
+  float: left;
+ 
+}
+.main-heading {
+  font-size: 70px;
+  margin-bottom: 20px;
+  text-align: center;
+ 
+}
+
+.page_info {
+  text-indent: 5ch;
+  padding-bottom: 20px;
+  text-align: center;
+  margin: auto;
+  width: 60%;
+  padding: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: x-large;
+  border: 5px solid gray;
+background-color: white;
+}
+
+#outside {
+  height: 400px;
+  padding-top: 10px;
+
+}
+
+.sales_info {
+  text-indent: 3ch;
+  padding-bottom: 20px;
+  margin: auto;
+  margin-top: 20px;
+  width: 60%;
+  padding: 20px;
+  font-family: 'Alfa Slab One', cursive;
+  border: 5px solid  #DC143C;
+  padding-top: 20px;
+  background-color: white;
+}
+
+h3 {
+  color: #B22222;
+  background-color: #32cd32;
+  margin-left: 125px;
+  margin-right: 100px;
+  padding-right:20px;
+  font-size: larger;
+  text-align: center;
+}
+
+
+h6 {
+  font-size: 1em;
+  text-align: center;
+}
+
+#christmas {
+  height: 500px;
+  padding-top: 20px;
+  align-items: center;
+  display: block;
+  margin: auto;
+
+}

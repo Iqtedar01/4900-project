@@ -1,0 +1,216 @@
+html {
+  font-family: 'Josefin Sans', sans-serif;
+  height: 100%;
+  background-color: grey;
+  line-height: 2;
+  font-size: large;
+  background-color: rgb(224,224,224);
+}
+
+body {
+  background-color: white;
+  border-left: 3px solid rgb(51, 51, 51);
+  border-right: 3px solid rgb(51, 51, 51);
+  min-height: 100%;
+  margin: 0px auto;
+  min-width: 320px;
+  padding: 10px;
+  font-size: larger;
+  background-color: rgb(224,224,224);
+  
+}
+}
+
+#wrapper {
+  margin: 0 auto;
+  background-color: #fff;
+}
+.center-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex {
+  display: flex;
+}
+
+header {
+    background-color: #d85959;
+    height: 20vh;
+    padding: 3px;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 20px;
+  font-size: 3em;
+  left: 100px;
+  position: absolute;
+} 
+
+ h5 {
+  text-align: right;
+  color: white;
+  right: -700px;
+  top: 50px;
+  position: relative;
+  font size: 20px;
+}
+
+.home_page {
+  padding: 5px 0 5px 0;
+  text-align: center;
+  line-height: 32px;
+  background-color: #818181;
+}
+
+ul.home_page {
+  margin-top: 15px;
+}
+
+.home_page li {
+  display: inline;
+  padding: 0 10px 0 10px;
+  font-size: 20px;
+}
+
+.home_page a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px;
+  font-variant: small-caps;
+}
+
+.home_page a:hover {
+  color: yellow;
+}
+.box {
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-post {
+  margin-top: 20px;
+  float: left;
+ 
+}
+.main-heading {
+  font-size: 70px;
+  text-decoration-color:indigo;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+form {
+  margin: 10% auto 0 auto;
+  padding: 30px;
+  width: 400px;
+  height: auto;
+  overflow: hidden;
+  background: white;
+  border-radius: 10px;
+}
+
+form label {
+  font-size: 14px;
+  color: darkgray;
+  cursor: pointer;
+}
+
+form label,
+form input {
+  float: left;
+  clear: both;
+}
+
+form input {
+  margin: 15px 0;
+  padding: 15px 10px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #bbb;
+  border-radius: 20px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -ms-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+form input[type='text']:focus,
+form input[type='password']:focus {
+  border-color: cornflowerblue;
+}
+
+input[type='submit'] {
+  padding: 15px 50px;
+  width: auto;
+  background: #1abc9c;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  clear: right;
+  -webkit-transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -ms-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+input[type='submit']:hover {
+  opacity: 0.8;
+}
+
+input[type='submit']:active {
+  opacity: 0.4;
+}
+
+.forgot,
+.register {
+  margin: 10px;
+  float: left;
+  clear: left;
+  display: inline-block;
+  color: cornflowerblue;
+  text-decoration: none;
+}
+
+.forgot:hover,
+.register:hover {
+  color: darkgray;
+}
+
+#logo {
+  margin: 0 auto;
+  width: 200px;
+  font-family:cursive;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  color: lightgray;
+  -webkit-transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -ms-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+#logo:hover {
+  color: cornflowerblue;
+}
+}
+#login-form {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}

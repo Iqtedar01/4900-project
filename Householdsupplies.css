@@ -1,0 +1,212 @@
+html {
+  font-family: 'Josefin Sans', sans-serif;
+  height: 100%;
+  line-height: 2;
+  font-size: large;
+  background-color: rgb(224,224,224);
+}
+
+body {
+  font-size: larger;
+  background-color: rgb(224,224,224);
+}
+
+#wrapper {
+  margin: 0 auto;
+  background-color: #fff;
+}
+.center-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex {
+  display: flex;
+}
+
+header {
+    background-color: #d85959;
+    height: 20vh;
+    padding: 3px;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 20px;
+  font-size: 3em;
+  left: 100px;
+  position: absolute;
+} 
+
+ h5 {
+  text-align: right;
+  color: white;
+  right: -700px;
+  top: 50px;
+  position: relative;
+  font size: 20px;
+}
+
+.home_page {
+  padding: 5px 0 5px 0;
+  text-align: center;
+  line-height: 32px;
+  background-color: #818181;
+}
+
+ul.home_page {
+  margin-top: 15px;
+}
+
+.home_page li {
+  display: inline;
+  padding: 0 10px 0 10px;
+  font-size: 20px;
+}
+
+.home_page a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px;
+  font-variant: small-caps;
+}
+
+.home_page a:hover {
+  color: yellow;
+}
+.box {
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 100px;
+  text-align: center;
+  background-color: white;
+
+}
+
+.price {
+  color: black;
+  font-size: 22px;
+}
+
+.card button {
+  border: solid;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+
+.cardtwo {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin-left: 730px;
+  text-align: center;
+  position: absolute;
+  top: 365px;
+  background-color: white;
+  max-height: 590px;
+}
+
+.pricetwo {
+  color: black;
+  font-size: 22px;
+}
+
+.cardtwo button {
+  border: solid;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.cardtwo button:hover {
+  opacity: 0.7;
+}
+
+.cardthree {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 100px;
+  text-align: center;
+  background-color: white;
+  position: absolute;
+  right: 90px;
+  top: 265px;
+  max-height: 600px;
+}
+
+.pricethree {
+  color: black;
+  font-size: 22px;
+}
+
+.cardthree button {
+  border: solid;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.cardthree button:hover {
+  opacity: 0.7;
+}
+
+.cardfour {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 100px;
+  text-align: center;
+  background-color: white;
+  position: absolute;
+  right: 90px;
+  top: 265px;
+  max-height: 600px;
+}
+
+.pricefour {
+  color: black;
+  font-size: 22px;
+}
+
+.cardfour button {
+  border: solid;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.cardfour button:hover {
+  opacity: 0.7;
+}
