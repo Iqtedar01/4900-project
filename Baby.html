@@ -8,6 +8,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+    <script>
+        function addToCart(event, cartItem) {
+            event.preventDefault()
+            let items = []
+            if (localStorage.getItem('items')) {
+                items = JSON.parse(localStorage.getItem('items'))
+            }
+            items = [...items, cartItem];
+            localStorage.setItem('items', JSON.stringify(items))
+            const count = items.length;
+            document.getElementById('cart-link').innerText = `cart(${count})`
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const items = localStorage.getItem('items')
+            if (items) {
+                const parsed = JSON.parse(localStorage.getItem('items'))
+                if (parsed.length) {
+                    document.getElementById('cart-link').innerText = `cart(${parsed.length})`
+                }
+            }
+        });
+    </script>
+</head>
 
 <body>
     <div id="wrapper">
@@ -31,78 +54,78 @@
                 <li><a href="Schoolsupplies.html">School Supplies</a></li>
                 <li><a href="Toys.html">Toys</a></li>
                 <li><a href="login.html">login</a></li>
+                <li><a id="cart-link" href="cart.html">cart</a></li>
             </ul>
         </nav>
     </div>
-    <div class="card">
-        <img src="diapers.jpeg" style="width:100%">
-        <h4>Pamper's Diapers</h4>
-        <p class="price">$19.99</p>
-        <p>Quantity left: 3</p>
-        <p><button>Add to Cart</button></p>
-    </div>
-    <div class="cardtwo">
-        <img src="babybottle.jpg" style="width:100%">
-        <h4>Baby Bottles</h4>
-        <p class="pricetwo">$19.99</p>
-        <p>Quantity left: 2</p>
-        <p><button>Add to Cart</button></p>
-    </div>
-    <div class="cardthree">
-        <img src="babywipes.webp" style="width:100%">
-        <h4>Dawny Pampers Baby Wipes</h4>
-        <p class="pricethree">$19.99</p>
-        <p>Quantity left: 3</p>
-        <p><button>Add to Cart</button></p>
-    </div>
-    <div class="cardfour">
-        <img src="gainsoap.webp" style="width:100%">
-        <h4>Dawny Dish Wash</h4>
-        <p class="pricefour">$19.99</p>
-        <p>Quantity left: 3</p>
-        <p><button>Add to Cart</button></p>
-    </div>
-    <div class="cardfive">
-        <img src="gainsoap.webp" style="width:100%">
-        <h4>Dawny Dish Wash</h4>
-        <p class="pricefive">$19.99</p>
-        <p>Quantity left: 3</p>
-        <p><button>Add to Cart</button></p>
-    </div>
-    <div class="cardsix">
-        <img src="gainsoap.webp" style="width:100%">
-        <h4>Dawny Dish Wash</h4>
-        <p class="pricesix">$19.99</p>
-        <p>Quantity left: 3</p>
-        <p><button>Add to Cart</button></p>
-    </div>
-    <div class="cardseven">
-        <img src="gainsoap.webp" style="width:100%">
-        <h4>Dawny Dish Wash</h4>
-        <p class="priceseven">$19.99</p>
-        <p>Quantity left: 3</p>
-        <p><button>Add to Cart</button></p>
-    </div>
-    <div class="cardeight">
-        <img src="gainsoap.webp" style="width:100%">
-        <h4>Dawny Dish Wash</h4>
-        <p class="priceeight">$19.99</p>
-        <p>Quantity left: 3</p>
-        <p><button>Add to Cart</button></p>
-    </div>
-    <div class="cardnine">
-        <img src="gainsoap.webp" style="width:100%">
-        <h4>Dawny Dish Wash</h4>
-        <p class="pricenine">$19.99</p>
-        <p>Quantity left: 3</p>
-        <p><button>Add to Cart</button></p>
-    </div>
-    <div class="cardten">
-        <img src="gainsoap.webp" style="width:100%">
-        <h4>Dawny Dish Wash</h4>
-        <p class="priceten">$19.99</p>
-        <p>Quantity left: 3</p>
-        <p><button>Add to Cart</button></p>
+    <div class="product-container">
+        <div class="card">
+            <img src="diapers.jpeg" style="width:100%">
+            <h4>Pamper's Diapers</h4>
+            <p class="price">$10.99</p>
+            <p>Quantity left: 10</p>
+            <p><button>Add to Cart</button></p>
+        </div>
+
+        <div class="cardtwo">
+            <img src="babybottle.jpg" style="width:100%">
+            <h4>Baby Bottles</h4>
+            <p class="pricetwo">$1.99</p>
+            <p>Quantity left: 5</p>
+            <p><button onclick="addToCart(event, {name: 'Baby Bottle', price: 19.99, quantity: 1})">Add to Cart</button>
+            </p>
+        </div>
+
+        <div class="cardthree">
+            <img src="babywipes.webp" style="width:100%">
+            <h4>Dawny Pampers Baby Wipes</h4>
+            <p class="pricethree">$2.99</p>
+            <p>Quantity left: 10</p>
+            <p><button>Add to Cart</button></p>
+        </div>
+
+        <div class="cardfive">
+            <img src="pacifier.jpg" style="width:75%">
+            <h4>Newborn Pacifiers</h4>
+            <p class="pricefive">$1.99</p>
+            <p>Quantity left: 11</p>
+            <p><button>Add to Cart</button></p>
+        </div>
+        <div class="cardsix">
+            <img src="blanket.jpeg" style="width:100%">
+            <h4>Baby Blanket</h4>
+            <p class="pricesix">$7.99</p>
+            <p>Quantity left: 9</p>
+            <p><button>Add to Cart</button></p>
+        </div>
+        <div class="cardseven">
+            <img src="babysippycup.jpg" style="width:80%">
+            <h4>Nuk Baby Sippy Cup</h4>
+            <p class="priceseven">$4.99</p>
+            <p>Quantity left: 13</p>
+            <p><button>Add to Cart</button></p>
+        </div>
+        <div class="cardeight">
+            <img src="babyteeth.jpg" style="width:100%">
+            <h4>Nuk Baby Teether</h4>
+            <p class="priceeight">$3.99</p>
+            <p>Quantity left: 3</p>
+            <p><button>Add to Cart</button></p>
+        </div>
+        <div class="cardnine">
+            <img src="babybag.jpg" style="width:100%">
+            <h4>Baby Essential Bag</h4>
+            <p class="pricenine">$19.99</p>
+            <p>Quantity left: 4</p>
+            <p><button>Add to Cart</button></p>
+        </div>
+        <div class="cardten">
+            <img src="babybibs.jpg" style="width:100%">
+            <h4>Baby Bib </h4>
+            <p class="priceten">$1.99</p>
+            <p>Quantity left: 15</p>
+            <p><button>Add to Cart</button></p>
+        </div>
     </div>
 </body>
 

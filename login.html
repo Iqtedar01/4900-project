@@ -8,13 +8,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
-
+    <script>
+        function submitLogin(event, loginForm) {
+            event.preventDefault();
+            const userName = loginForm?.elements[0]?.value;
+            const password = loginForm?.elements[1]?.value;
+            localStorage.setItem('username', userName);
+            window.location.href = '99chome.html'
+        }
+    </script>
+    <script>
+        function addToCart(event, cartItem) {
+            event.preventDefault()
+            let items = []
+            if (localStorage.getItem('items')) {
+                items = JSON.parse(localStorage.getItem('items'))
+            }
+            items = [...items, cartItem];
+            localStorage.setItem('items', JSON.stringify(items))
+            const count = items.length;
+            document.getElementById('cart-link').innerText = `cart(${count})`
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const items = localStorage.getItem('items')
+            if (items) {
+                const parsed = JSON.parse(localStorage.getItem('items'))
+                if (parsed.length) {
+                    document.getElementById('cart-link').innerText = `cart(${parsed.length})`
+                }
+            }
+        });
+    </script>
 </head>
 
 <body>
     <div id="wrapper">
         <header class="center-align bg-background">
-            <!-- <img style="padding: 15px;" src="image1.png"> -->
             <div>
                 <h1>
                     99 Cents Lots Inc
@@ -34,12 +63,13 @@
                 <li><a href="Schoolsupplies.html">School Supplies</a></li>
                 <li><a href="Toys.html">Toys</a></li>
                 <li><a href="login.html">login</a></li>
+                <li><a id="cart-link" href="cart.html">cart</a></li>
             </ul>
         </nav>
     </div>
     <div id="login-form" class="store-bg center-align">
         <div>
-            <form method="get" action="99chome.html">
+            <form name="loginForm">
                 <h3 id="logo">Log In</h3>
 
                 <label for="username">Username</label>
@@ -51,9 +81,10 @@
                     autocomplete="off" required />
 
                 <a class="forgot" href="#">Forgot Password?</a>
-                <a class="register" href="#">Register</a>
+                <a class="register" href="register.html">Register</a>
 
-                <input id="submit-login" type="submit" name="submit" value="Log In" />
+                <input id="submit-login" type="submit" name="submit" value="Log In"
+                    onclick="submitLogin(event, loginForm)" />
             </form>
         </div>
     </div>

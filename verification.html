@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>99 Cents Lots Inc</title>
+    <link rel="stylesheet" type="text/css" href="verification.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hasUserName = localStorage.getItem('username');
+            if (hasUserName) {
+                document.getElementById('login-link').remove();
+                document.getElementById('logout-link').style.display = 'inline';
+            } else {
+                window.location.href = 'login.html'
+            }
+        });
+
+        function logout(event) {
+            event.preventDefault();
+            localStorage.removeItem('username')
+            window.location.href = 'login.html'
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header class="center-align bg-background">
+            <div>
+                <h1>
+                    99 Cents Lots Inc
+                </h1>
+                <h5> Address: 394 New Lots Aveune Brooklyn NY, 11230
+                    <br> Contact Us At: 347-977-4927 </br>
+                </h5>
+            </div>
+        </header>
+
+        <nav>
+            <ul class="home_page">
+                <li><a href="99chome.html">Home</a></li>
+                <li><a href="Householdsupplies.html">Household Supplies</a></li>
+                <li><a href="Baby.html">Baby</a></li>
+                <li><a href="Healthandbody.html">Health and Body</a></li>
+                <li><a href="Schoolsupplies.html">School Supplies</a></li>
+                <li><a href="Toys.html">Toys</a></li>
+                <li><a id="cart-link" href="cart.html">cart</a></li>
+                <li id="login-link"><a href="login.html">login</a></li>
+                <li id="logout-link" style="display: none;"><a href="#" onclick="logout(event)">logout</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="submit-order">
+        <h2>Thank you for supporting us!</h2>
+        <img src="outsideview.jpg" style="width:300px">
+        <h3>Your order will be ready to pick up in <u>30 to 40 minutes.</u>
+            <br> For any questions or concerns please call us at <u>347-977-4927.</u><br>
+        </h3>
+        <a href="99chome.html">
+            <button class="Button">Back to Home Page </button>
+        </a>
+    </div>
+</body>
+
+</html>

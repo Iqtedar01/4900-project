@@ -44,7 +44,7 @@ h1 {
   text-transform: uppercase;
   color: #fff;
   line-height: 20px;
-  font-size: 3em;
+  font-size: 3.5em;
   left: 100px;
   position: absolute;
 } 
@@ -55,7 +55,7 @@ h1 {
   right: -700px;
   top: 50px;
   position: relative;
-  font size: 20px;
+  font size: 25px;
 }
 
 .home_page {

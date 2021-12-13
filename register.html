@@ -1,20 +1,20 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <title>99 Cents Lots Inc</title>
-    <link rel="stylesheet" type="text/css" href="99chome.css" />
-    <link rel="stylesheet" type="text/css" href="99chome.css" />
+    <link rel="stylesheet" type="text/css" href="login.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <div id="wrapper">
         <header class="center-align bg-background">
-             <img style="padding: 15px;" src="image1.png"> 
+            <!-- <img style="padding: 15px;" src="image1.png"> -->
             <div>
                 <h1>
                     99 Cents Lots Inc
@@ -24,6 +24,7 @@
                 </h5>
             </div>
         </header>
+
         <nav>
             <ul class="home_page">
                 <li><a href="99chome.html">Home</a></li>
@@ -31,11 +32,26 @@
                 <li><a href="Baby.html">Baby</a></li>
                 <li><a href="Healthandbody.html">Health and Body</a></li>
                 <li><a href="Schoolsupplies.html">School Supplies</a></li>
-                <li><a href="Food.html">Food</a></li>
                 <li><a href="Toys.html">Toys</a></li>
                 <li><a href="login.html">login</a></li>
+                <li><a id="cart-link" href="cart.html">cart</a></li>
             </ul>
         </nav>
     </div>
-</body> 
--->
+    <div id="login-form" class="store-bg center-align">
+        <div>
+            <form method="get" action="99chome.html">
+                <h3 id="logo">Sign Up</h3>
+
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Type in your username.."
+                    autocomplete="off" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password.."
+                    autocomplete="off" required />
+                <input id="submit-login" type="submit" name="submit" value="Sign up" />
+            </form>
+        </div>
+    </div>
+</body>

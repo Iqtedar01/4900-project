@@ -1,0 +1,276 @@
+html {
+  font-family: 'Josefin Sans', sans-serif;
+  height: 100%;
+  background-color: grey;
+  line-height: 2;
+  font-size: large;
+  background-color: rgb(224,224,224);
+}
+
+body {
+  background-color: white;
+  border-left: 3px solid rgb(51, 51, 51);
+  border-right: 3px solid rgb(51, 51, 51);
+  min-height: 100%;
+  margin: 0px auto;
+  min-width: 320px;
+  padding: 10px;
+  font-size: larger;
+  background-color: rgb(224,224,224); 
+  
+}
+
+#wrapper {
+  margin: 0 auto;
+  background-color: #fff;
+}
+.center-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex {
+  display: flex;
+}
+
+header {
+    background-color: #d85959;
+    height: 20vh;
+    padding: 3px;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 20px;
+  font-size: 3.5em;
+  left: 100px;
+  position: absolute;
+} 
+
+ h5 {
+  text-align: right;
+  color: white;
+  right: -700px;
+  top: 50px;
+  position: relative;
+  font size: 25px;
+}
+
+.home_page {
+  padding: 5px 0 5px 0;
+  text-align: center;
+  line-height: 32px;
+  background-color: #818181;
+}
+
+ul.home_page {
+  margin-top: 15px;
+}
+
+.home_page li {
+  display: inline;
+  padding: 0 10px 0 10px;
+  font-size: 20px;
+}
+
+.home_page a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px;
+  font-variant: small-caps;
+}
+
+.home_page a:hover {
+  color: yellow;
+}
+.box {
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+
+ }
+
+.wrapper {
+  width: 100%;
+  padding: 10px;
+}
+
+.container {
+  max-width: 500px;
+  height: auto;
+  margin: 0px auto;
+  background: #fff;
+  padding: 20px 40px 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top: 7px solid white;
+}
+
+.input-form {
+  margin-bottom: 20px;
+}
+
+.input-form .label {
+  display: block;
+  font-size: 1em;
+  color: #212121;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+.input-form .items {
+  margin-bottom: 20px;
+}
+
+.section-1 .items .input,
+.section-2 .items .input,
+.section-3 .items .input {
+  background: transparent;
+  border: 2px solid #bdbdbd;
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  color: #212121;
+  border-radius: 3px;
+}
+
+.input-form .section-3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-form .section-3 .items {
+  width: 48%;
+}
+
+.btn {
+  background: #f80404;
+  color: #fff;
+  font-size: 1.25em;
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.cvc {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.cvc .tooltip {
+  color: #d4d4d4;
+  border: 2px solid #0f0f0f;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.cvc .cvc-img {
+  position: absolute;
+  top: -300%;
+  right: 0;
+  background: #3b6eb1;
+  padding: 12px;
+  border-radius: 5px;
+  display: none;
+}
+
+.cvc .cvc-img img {
+  width: 100px;
+  height: auto;
+  display: block;
+}
+
+.cvc:hover .cvc-img {
+  display: block;
+}
+
+@media screen and (max-width: 460px) {
+  .input-form .section-3 {
+    flex-direction: column;
+  }
+  .input-form .section-3 .items {
+    width: 100%;
+  }
+  .input-form .items {
+    margin-bottom: 10px;
+  }
+
+  .input-form {
+    margin-bottom: 15px;
+  }
+  .title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+}
+
+.error {
+  color: red;
+}
+.hidden {
+  display: hidden;
+}
+
+#submit-form {
+  padding: 10px 10px;
+}
+ h4 {
+   text-align:middle;
+   font-size:2em;
+   margin-left:170px;
+  padding-top: 15px;
+ }
+ h6 {
+   text-align:middle;
+   font-size:.90em;
+   margin-left: 50px;
+   margin-bottom: 20px;
+   font-family: 'Josefin Sans', sans-serif;
+   font-weight:900;
+ }
+.cash {
+  background: blue;
+  color: #fff;
+  font-size: 1em;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-right:200px;
+}
+
+.Pay-cash {
+  margin-left: 690px;
+  background-color: white;
+  width:500px;
+  height:250px;
+  text-align:center;
+  border: 2px #bdbdbd;
+  border-radius: 5px;
+}
+h4 {
+  padding-right:200px;
+  font-style:bold underline;
+}
+h6 {
+  padding-right:100px;
+}

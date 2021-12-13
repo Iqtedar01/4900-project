@@ -306,7 +306,9 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   opacity: 0.7;
 }
 
-
+.cardeight img {
+  padding-top:20px;
+}
 
 .cardnine{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -372,5 +374,8 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   opacity: 0.7;
 }
 
+.cardten img {
+  padding-top:70px;
+}
 
 

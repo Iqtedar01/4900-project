@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>99 Cents Lots Inc</title>
+    <link rel="stylesheet" type="text/css" href="checkout.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hasUserName = localStorage.getItem('username');
+            if (hasUserName) {
+                document.getElementById('login-link').remove();
+                document.getElementById('logout-link').style.display = 'inline';
+            } else {
+                window.location.href = 'login.html'
+            }
+        });
+
+        function logout(event) {
+            event.preventDefault();
+            localStorage.removeItem('username')
+            window.location.href = 'login.html'
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header class="center-align bg-background">
+            <div>
+                <h1>
+                    99 Cents Lots Inc
+                </h1>
+                <h5> Address: 394 New Lots Aveune Brooklyn NY, 11230
+                    <br> Contact Us At: 347-977-4927 </br>
+                </h5>
+            </div>
+        </header>
+
+        <nav>
+            <ul class="home_page">
+                <li><a href="99chome.html">Home</a></li>
+                <li><a href="Householdsupplies.html">Household Supplies</a></li>
+                <li><a href="Baby.html">Baby</a></li>
+                <li><a href="Healthandbody.html">Health and Body</a></li>
+                <li><a href="Schoolsupplies.html">School Supplies</a></li>
+                <li><a href="Toys.html">Toys</a></li>
+                <li><a id="cart-link" href="cart.html">cart</a></li>
+                <li id="login-link"><a href="login.html">login</a></li>
+                <li id="logout-link" style="display: none;"><a href="#" onclick="logout(event)">logout</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="wrapper">
+        <div class="container">
+            <form action="verification.html" id="payment-form">
+                <div class="input-form">
+                    <div class="section-1">
+                        <div class="items">
+                            <label class="label">card number</label>
+                            <input id="cardNumber" type="text" class="input" maxlength="16" required
+                                data-mask="0000 0000 0000 0000" placeholder="1234 1234 1234 1234" />
+                            <span id="cardNumberError" class="error hidden">*Credit card must have 16 numbers</span>
+                        </div>
+                    </div>
+                    <div class="section-2">
+                        <div class="items">
+                            <label class="label">Card Holder Name</label>
+                            <input required id="cardHolder" type="text" class="input" placeholder="Card Holder" />
+                            <span id="cardHolderError" class="error hidden">*First name and Last Name should only use
+                                letters and is required</span>
+                        </div>
+                    </div>
+                    <div class="section-3">
+                        <div class="items">
+                            <label class="label">Expiration Date</label>
+                            <input required type="text" id="expireDate" class="input" data-mask="00 / 00"
+                                placeholder="MM / YY" />
+                            <span id="expireDateError" class="error hidden">*Please enter a valid date</span>
+                        </div>
+                        <div class="items">
+                            <div class="cvc">
+                                <label class="label">CVC Code</label>
+                            </div>
+                            <input required id="cvcCode" type="text" class="input" data-mask="0000" placeholder="000" />
+                            <span id="cvcCodeError" class="error hidden">*Enter at least 3 numbers</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="submit-form" type="submit" class="btn">Submit</button>
+            </form>
+
+        </div>
+    </div>
+    <div class="Pay-cash">
+        <h4> OR </h4>
+        <h6>Would you like to pay in person?</h6>
+        <a href="verification.html">
+            <button id="submit-form" type="submit" class="cash">Pay in person</button>
+        </a>
+    </div>
+    </div>
+</body>
+
+</html>

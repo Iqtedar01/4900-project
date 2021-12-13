@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>99 Cents Lots Inc</title>
+    <link rel="stylesheet" type="text/css" href="login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cartElem = localStorage.getItem('items');
+            const allItems = JSON.parse(cartElem)
+            allItems.forEach(el => {
+                addElement(el)
+            })
+        });
+
+        function addElement(cartElem) {
+            // create a new div element
+            const newDiv = document.createElement("div");
+            console.log(cartElem)
+            // and give it some content
+            const newContent = document.createTextNode(`ITEM IS: ${cartElem.name}, ${cartElem.price}, ${cartElem.quantity}`);
+
+            // add the text node to the newly created div
+            newDiv.appendChild(newContent);
+
+            // add the newly created element and its content into the DOM
+            const currentDiv = document.getElementById("div1");
+            document.body.insertBefore(newDiv, currentDiv);
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header class="center-align bg-background">
+            <div>
+                <h1>
+                    99 Cents Lots Inc
+                </h1>
+                <h5> Address: 394 New Lots Aveune Brooklyn NY, 11230
+                    <br> Contact Us At: 347-977-4927 </br>
+                </h5>
+            </div>
+        </header>
+
+        <nav>
+            <ul class="home_page">
+                <li><a href="99chome.html">Home</a></li>
+                <li><a href="Householdsupplies.html">Household Supplies</a></li>
+                <li><a href="Baby.html">Baby</a></li>
+                <li><a href="Healthandbody.html">Health and Body</a></li>
+                <li><a href="Schoolsupplies.html">School Supplies</a></li>
+                <li><a href="Toys.html">Toys</a></li>
+                <li><a href="login.html">login</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+</body>
