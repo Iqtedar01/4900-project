@@ -4,35 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <title>99 Cents Lots Inc</title>
-    <link rel="stylesheet" type="text/css" href="login.css" />
+    <link rel="stylesheet" type="text/css" href="cart.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const cartElem = localStorage.getItem('items');
-            const allItems = JSON.parse(cartElem)
-            allItems.forEach(el => {
-                addElement(el)
-            })
-        });
-
-        function addElement(cartElem) {
-            // create a new div element
-            const newDiv = document.createElement("div");
-            console.log(cartElem)
-            // and give it some content
-            const newContent = document.createTextNode(`ITEM IS: ${cartElem.name}, ${cartElem.price}, ${cartElem.quantity}`);
-
-            // add the text node to the newly created div
-            newDiv.appendChild(newContent);
-
-            // add the newly created element and its content into the DOM
-            const currentDiv = document.getElementById("div1");
-            document.body.insertBefore(newDiv, currentDiv);
-        }
-
-    </script>
+    <script src="cart.js"> </script>
+    <script src="logout.js"></script>
 </head>
 
 <body>
@@ -56,9 +33,30 @@
                 <li><a href="Healthandbody.html">Health and Body</a></li>
                 <li><a href="Schoolsupplies.html">School Supplies</a></li>
                 <li><a href="Toys.html">Toys</a></li>
-                <li><a href="login.html">login</a></li>
+                <li id="login-link"><a href="login.html">login</a></li>
+                <li id="logout-link" style="display: none;"><a href="#" onclick="logout(event)">logout</a></li>
             </ul>
         </nav>
     </div>
-    
+
+    <h2>Shopping Cart</h2>
+
+    <div class="shopping-cart">
+
+        <div class="column-labels">
+            <label class="product-image">Image</label>
+            <label class="product-details">Product</label>
+            <label class="product-price">Price</label>
+            <label class="product-quantity">Quantity</label>
+            <label class="product-removal">Remove</label>
+            <label class="product-line-price">Total</label>
+        </div>
+        <div class="check-out">
+            <a href="checkout.html">
+                <button id="submit-form" type="submit" class="check-out">Checkout</button>
+            </a>
+        </div>
+    </div>
 </body>
+
+</html>

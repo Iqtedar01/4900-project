@@ -8,28 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
-    <script>
-        function addToCart(event, cartItem) {
-            event.preventDefault()
-            let items = []
-            if (localStorage.getItem('items')) {
-                items = JSON.parse(localStorage.getItem('items'))
-            }
-            items = [...items, cartItem];
-            localStorage.setItem('items', JSON.stringify(items))
-            const count = items.length;
-            document.getElementById('cart-link').innerText = `cart(${count})`
-        }
-        document.addEventListener("DOMContentLoaded", function () {
-            const items = localStorage.getItem('items')
-            if (items) {
-                const parsed = JSON.parse(localStorage.getItem('items'))
-                if (parsed.length) {
-                    document.getElementById('cart-link').innerText = `cart(${parsed.length})`
-                }
-            }
-        });
-    </script>
+    <script src="addtocart.js"> </script>
+    <script src="logout.js"></script>
 </head>
 
 <body>
@@ -54,7 +34,8 @@
                 <li><a href="Healthandbody.html">Health and Body</a></li>
                 <li><a href="Schoolsupplies.html">School Supplies</a></li>
                 <li><a href="Toys.html">Toys</a></li>
-                <li><a href="login.html">login</a></li>
+                <li id="login-link"><a href="login.html">login</a></li>
+                <li id="logout-link" style="display: none;"><a href="#" onclick="logout(event)">logout</a></li>
                 <li><a id="cart-link" href="cart.html">cart</a></li>
             </ul>
         </nav>
@@ -72,59 +53,74 @@
         <div class="cardtwo">
             <img src="babydoll.jpg" style="width:83%">
             <h4>Baby Dolls</h4>
-            <p class="pricetwo">$9.99</p>
+            <p class="pricetwo">$5.99</p>
             <p>Quantity left: 13</p>
-            <p><button onclick="addToCart(event, {name: 'Baby Dolls', price: 9.99, quantity: 1})">Add to
-                    Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Baby Dolls', image: 'babydoll.jpg', price: 5.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardthree">
             <img src="toycar.jpg" style="width:100%">
             <h4>Toy Remote Control Car</h4>
             <p class="pricethree">$24.99</p>
             <p>Quantity left: 15</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Toy Remote Control Car', image: 'toycar.jpg', price: 24.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardfive">
             <img src="toydog.jpeg" style="width:100%">
             <h4>Stuffed Animals</h4>
             <p class="pricefive">$4.99</p>
             <p>Quantity left: 15</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Stuffed Animal', image: 'toydog.jpeg', price: 4.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardsix">
             <img src="bmwi8toy.jpeg" style="width:86%">
             <h4>Fully Electric BMW Remote Control Car For Kids 4 & up</h4>
             <p class="pricesix">$199.99</p>
             <p>Quantity left: 10</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Electric Bmw Remote Control Car', image: 'bmwi8toy.jpeg', price: 199.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardseven">
             <img src="boybike.jpeg" style="width:100%">
             <h4>Children Bicycles</h4>
             <p class="priceseven">$39.99</p>
             <p>Quantity left: 10</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Children Bicycles', image: 'boybike.jpeg', price: 39.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardeight">
             <img src="babyelephant.jpg" style="width:100%">
             <h4>Elephant Voice Toy</h4>
             <p class="priceeight">$15.99</p>
             <p>Quantity left: 6</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Elephant Voice Toy', image: 'babyelephant.jpg', price: 15.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardnine">
             <img src="robotunicorn.jpg" style="width:100%">
             <h4>Robo Unicorn Toy For Girls</h4>
             <p class="pricenine">$9.99</p>
             <p>Quantity left: 5</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Robo Unicorn Toy', image: 'robotunicorn.jpg', price: 9.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardten">
             <img src="toypiano.jpg" style="width:100%">
             <h4>Piano Keyboard With Sounds</h4>
             <p class="priceten">$10.99</p>
             <p>Quantity left: 3</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Piano Keyboard With Sounds', image: 'toypiano.jpg', price: 10.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
     </div>
 </body>

@@ -8,28 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
-    <script>
-        function addToCart(event, cartItem) {
-            event.preventDefault()
-            let items = []
-            if (localStorage.getItem('items')) {
-                items = JSON.parse(localStorage.getItem('items'))
-            }
-            items = [...items, cartItem];
-            localStorage.setItem('items', JSON.stringify(items))
-            const count = items.length;
-            document.getElementById('cart-link').innerText = `cart(${count})`
-        }
-        document.addEventListener("DOMContentLoaded", function () {
-            const items = localStorage.getItem('items')
-            if (items) {
-                const parsed = JSON.parse(localStorage.getItem('items'))
-                if (parsed.length) {
-                    document.getElementById('cart-link').innerText = `cart(${parsed.length})`
-                }
-            }
-        });
-    </script>
+    <script src="addtocart.js"></script>
+    <script src="logout.js"></script>
+
 </head>
 
 <body>
@@ -53,7 +34,8 @@
                 <li><a href="Healthandbody.html">Health and Body</a></li>
                 <li><a href="Schoolsupplies.html">School Supplies</a></li>
                 <li><a href="Toys.html">Toys</a></li>
-                <li><a href="login.html">login</a></li>
+                <li id="login-link"><a href="login.html">login</a></li>
+                <li id="logout-link" style="display: none;"><a href="#" onclick="logout(event)">logout</a></li>
                 <li><a id="cart-link" href="cart.html">cart</a></li>
             </ul>
         </nav>
@@ -64,63 +46,81 @@
             <h4>Dove Men Deodorant</h4>
             <p class="price">$3.99</p>
             <p>Quantity left: 15</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Dove Men Deodorant', image: 'mendeodorant.jpg', price: 3.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardtwo">
             <img src="womendove.jpg" style="width:100%">
             <h4>Dove Women Body Wash</h4>
             <p class="pricetwo">$4.99</p>
             <p>Quantity left: 10</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Dove Women Body Wash', image: 'womendove.jpg', price: 4.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardthree">
             <img src="dovemen.jpeg" style="width:100%">
             <h4>Dove Men Body Wash</h4>
             <p class="pricethree">$4.99</p>
             <p>Quantity left: 8</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Dove Men Body Wash', image: 'dovemen.jpeg', price: 4.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardfive">
             <img src="alwayswomen.jpeg" style="width:100%">
             <h4>Always Women Pads</h4>
             <p class="pricefive">$5.99</p>
             <p>Quantity left: 10</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Always Women Pads', image: 'alwayswomen.jpeg', price: 5.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardsix">
             <img src="pregnancytest.webp" style="width:100%">
             <h4>Pregnancy Test</h4>
             <p class="pricesix">$2.99</p>
             <p>Quantity left: 15</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Pregnancy Test', image: 'pregnancytest.webp', price: 2.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardseven">
             <img src="oldspicemen.webp" style="width:100%">
             <h4>Men Oldspice Body Wash</h4>
             <p class="priceseven">$5.99</p>
             <p>Quantity left: 7</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Men Oldspice Body Wash', image: 'oldspicemen.webp', price: 5.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardeight">
             <img src="facescrub.jpg" style="width:100%">
             <h4>ST IVES Face Scrub</h4>
             <p class="priceeight">$4.99</p>
             <p>Quantity left: 7</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'ST IVES Face Scrub', image: 'facescrub.jpg', price: 4.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardnine">
             <img src="womenstives.png" style="width:100%">
             <h4>Women ST IVES Body Wash</h4>
             <p class="pricenine">$2.99</p>
             <p>Quantity left: 3</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Women ST IVES Body Wash', image: 'womenstives.png', price: 2.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardten">
             <img src="womendeo.jpeg" style="width:100%">
             <h4>Dove Women Deodorant</h4>
             <p class="priceten">$4.99</p>
             <p>Quantity left: 9</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Dove Women Deodorant', image: 'womendeo.jpeg', price: 4.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
     </div>
 </body>

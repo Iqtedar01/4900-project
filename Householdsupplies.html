@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+    <script src="addtocart.js"> </script>
+    <script src="logout.js"></script>
 </head>
 
 <body>
@@ -31,8 +33,9 @@
                 <li><a href="Healthandbody.html">Health and Body</a></li>
                 <li><a href="Schoolsupplies.html">School Supplies</a></li>
                 <li><a href="Toys.html">Toys</a></li>
-                <li><a href="login.html">login</a></li>
                 <li><a id="cart-link" href="cart.html">cart</a></li>
+                <li id="login-link"><a href="login.html">login</a></li>
+                <li id="logout-link" style="display: none;"><a href="#" onclick="logout(event)">logout</a></li>
             </ul>
         </nav>
     </div>
@@ -42,65 +45,83 @@
             <h4>Dawny Dish Wash</h4>
             <p class="price">$3.99</p>
             <p>Quantity left: 3</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Dawny Dish Wash', image: 'dawny.webp', price: 3.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardtwo">
             <img src="palmolive.jpg" style="width:43%">
             <h4>Palmolive Dish Wash</h4>
             <p class="pricetwo">$2.99</p>
             <p>Quantity left: 5</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Palmolive Dish Wash', image: 'almolive.jpg', price: 2.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardthree">
             <img src="gainsoap.webp" style="width:100%">
             <h4>Gain Dish Wash</h4>
             <p class="pricethree">$2.99</p>
             <p>Quantity left: 10</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Gain Dish Wash', image: 'gainsoap.webp', price: 2.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardfive">
             <img src="windex.jpeg" style="width:100%">
             <h4>Windex Glass Cleaner</h4>
             <p class="pricefive">$3.99</p>
             <p>Quantity left: 6</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Windex Glass Cleaner', image: 'windex.jpeg', price: 3.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
 
         <div class="cardsix">
             <img src="Gladgarbobag.jpg" style="width:100%">
             <h4>Glad Garbage bags</h4>
-            <p class="pricesix">$10.99</p>
+            <p class="pricesix">$9.99</p>
             <p>Quantity left: 9</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Glad Garbage bags', image: 'Gladgarbobag.jpg', price: 9.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
 
         <div class="cardseven">
             <img src="bounty.jpeg" style="width:100%">
-            <h4>Bounty Double Size</h4>
+            <h4>Bounty Paper Towel Double Size</h4>
             <p class="priceseven">$25.99</p>
             <p>Quantity left: 11</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Bounty Paper Towel Double Size', image: 'bounty.jpeg', price: 25.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardeight">
             <img src="scottrolls.jpg" style="width:100%">
             <h4>Scott Toilet Paper</h4>
             <p class="priceeight">$15.99</p>
             <p>Quantity left: 7</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Scott Toilet Paper', image: 'scottrolls.jpg', price: 15.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardnine">
             <img src="cloroaxspray.jpeg" style="width:100%">
             <h4>Dawny Dish Wash</h4>
             <p class="pricenine">$4.99</p>
             <p>Quantity left: 10</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Dawny Dish Wash', image: 'cloroaxspray.jpeg', price: 4.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
         <div class="cardten">
             <img src="tide.jpg" style="width:65%">
             <h4>Tide Laundry Detergent </h4>
             <p class="priceten">$7.99</p>
             <p>Quantity left: 12</p>
-            <p><button>Add to Cart</button></p>
+            <p><button
+                    onclick="addToCart(event, {name: 'Tide Laundry Detergent', image: 'tide.jpg', price: 7.99, quantity: 1})">Add
+                    to Cart</button></p>
         </div>
     </div>
 </body>
