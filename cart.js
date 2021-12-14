@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     const calcs = calculateCartTotals(allItems);
     addCartTotal(
-        calcs.subTotal,
+        calcs.subTotal.toFixed(2),
         calcs.taxRate,
         calcs.taxedAmount.toFixed(2),
         calcs.total.toFixed(2)
@@ -87,7 +87,7 @@ function removeElement(ev) {
             const calcs = calculateCartTotals(items);
 
             updateTotals(
-                calcs.subTotal,
+                calcs.subTotal.toFixed(2),
                 calcs.taxedAmount.toFixed(2),
                 calcs.total.toFixed(2)
             );
@@ -116,7 +116,7 @@ function addCartRow(cartElem) {
         }</div>
     </div>`;
     const newElementToCard = createElementFromHTML(divEl);
-    
+
     newDiv.appendChild(newElementToCard);
 
     const currentDiv = document.getElementById("div1");
@@ -126,7 +126,7 @@ function addCartRow(cartElem) {
         var div = document.createElement("div");
         div.innerHTML = htmlString.trim();
 
-        
+
         return div.firstChild;
     }
 }
