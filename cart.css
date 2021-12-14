@@ -325,9 +325,7 @@ h1 {
   cursor: pointer;
   font-weight: bold;
   letter-spacing: 2px;
-  margin-right:10000px;
-  bottom: -3975px;
-  position: absolute;
-  left: 600px;
-}
+  margin-right: 10000px;
+  padding-right:10px;
+  padding-left:10px;
 }
